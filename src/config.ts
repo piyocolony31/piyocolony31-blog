@@ -140,4 +140,10 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `${SITE.title} on Mastodon`,
     active: false,
   },
+  {
+    name: "Zenn",
+    href: "https://zenn.dev/eunsol_seo",
+    linkTitle: `${SITE.title} on Zenn`,
+    active: true,
+  },
 ];
