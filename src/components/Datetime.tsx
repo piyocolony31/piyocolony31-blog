@@ -1,5 +1,7 @@
 import { LOCALE } from "@config";
 
+import { utcToZonedTime } from 'date-fns-tz';
+
 export interface Props {
   datetime: string | Date;
   size?: "sm" | "lg";
@@ -29,14 +31,15 @@ export default function Datetime({ datetime, size = "sm", className }: Props) {
 
 const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
   const myDatetime = new Date(datetime);
+  const myDatetimeJst = utcToZonedTime(myDatetime, 'Asia/Tokyo');
 
-  const date = myDatetime.toLocaleDateString(LOCALE, {
+  const date = myDatetimeJst.toLocaleDateString(LOCALE, {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
 
-  const time = myDatetime.toLocaleTimeString(LOCALE, {
+  const time = myDatetimeJst.toLocaleTimeString(LOCALE, {
     hour: "2-digit",
     minute: "2-digit",
   });
