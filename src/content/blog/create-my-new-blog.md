@@ -1,6 +1,6 @@
 ---
 author: Eunsol
-pubDatetime: 2023-08-12T11:23:00.000+09:00
+pubDatetime: 2023-08-12T11:23:00+09:00
 title: Astroで新しいブログを作成しました
 postSlug: create-my-new-blog
 featured: false
