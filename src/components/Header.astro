@@ -4,7 +4,6 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 import logoPNG from "/assets/logo.png";
-import logoSVG from "/assets/logo.svg";
 
 export interface Props {
   activeNav?: "posts" | "tags" | "about" | "search";
@@ -18,18 +17,10 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo">
-        {
-          LOGO_IMAGE.enable ? (
-            <img
-              src={LOGO_IMAGE.svg ? logoSVG : logoPNG}
-              alt="AstroPaper Logo"
-              width={LOGO_IMAGE.width}
-              height={LOGO_IMAGE.height}
-            />
-          ) : (
-            SITE.title
-          )
-        }
+        <div class="container-icon-title">
+          <!-- <img class="hiyoko-icon" src={logoPNG} alt="Logo" /> -->
+          {SITE.title}
+        </div>
       </a>
       <nav id="nav-menu">
         <button
@@ -119,6 +110,14 @@ const { activeNav } = Astro.props;
 </header>
 
 <style>
+  .hiyoko-icon {
+    @apply mr-1 h-9 w-9 sm:h-16 sm:w-16;
+  }
+
+  .container-icon-title {
+    @apply flex flex-row items-center text-base sm:text-xl;
+  }
+
   #skip-to-content {
     @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }
@@ -129,7 +128,7 @@ const { activeNav } = Astro.props;
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
   }
   .logo {
-    @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl w-56;
+    @apply absolute w-56 py-1 text-xl font-semibold sm:static sm:text-2xl;
   }
   .hamburger-menu {
     @apply self-end p-2 sm:hidden;
@@ -139,7 +138,7 @@ const { activeNav } = Astro.props;
   }
 
   nav {
-    @apply flex w-full flex-col items-center bg-skin-fill sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
+    @apply flex w-full flex-col items-center bg-skin-fill sm:ml-2 sm:w-auto sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
   }
   nav ul {
     @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
