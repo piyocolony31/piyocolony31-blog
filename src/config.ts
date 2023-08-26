@@ -1,10 +1,10 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/",
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "piyocolony31 Blog",
+  website: "https://piyocolony31-blog.vercel.app/",
+  author: "piyocolony31",
+  desc: "blog of piyocolony31",
+  title: "piyocolony31 blog",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
@@ -22,7 +22,7 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/sashapivovarova",
+    href: "https://github.com/piyocolony31",
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
@@ -52,9 +52,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Twitter",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://twitter.com/mt_jickcken",
     linkTitle: `${SITE.title} on Twitter`,
-    active: false,
+    active: true,
   },
   {
     name: "Twitch",
@@ -144,6 +144,6 @@ export const SOCIALS: SocialObjects = [
     name: "Zenn",
     href: "https://zenn.dev/piyocolony31_seo",
     linkTitle: `${SITE.title} on Zenn`,
-    active: true,
+    active: false,
   },
 ];
