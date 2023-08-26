@@ -27,6 +27,7 @@ export default defineConfig({
         },
       ],
     ],
+    rehypePlugins: ["rehype-slug", ["rehype-toc", { headings: ["h2", "h3"] }]],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
