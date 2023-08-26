@@ -15,6 +15,8 @@ description: 5分でアクセス解析
 
 ## 静的サイトでアクセス解析がしたい
 
+アクセスを期待しているわけではないですが、せっかくブログを作ったのでアクセス解析を実装してみました。
+
 ## やりかた
 
 [公式の QuickStart](https://vercel.com/docs/analytics/quickstart)のとおりです。
