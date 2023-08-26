@@ -58,7 +58,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
   </main>
-  <Footer />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 </Layout>
 
 <style>
@@ -70,5 +70,22 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   }
   .tags-container {
     @apply my-8;
+  }
+</style>
+<style is:global>
+    /* heading-anchor */
+    .heading-anchor {
+    visibility: hidden;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+    width: 100px;
+  }
+
+  h2:hover .heading-anchor {
+    visibility: visible;
+  }
+
+  h3:hover .heading-anchor {
+    visibility: visible;
   }
 </style>

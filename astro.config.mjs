@@ -27,7 +27,24 @@ export default defineConfig({
         },
       ],
     ],
-    rehypePlugins: ["rehype-slug", ["rehype-toc", { headings: ["h2", "h3"] }]],
+    rehypePlugins: [
+      "rehype-slug",
+      [
+        "rehype-autolink-headings",
+        {
+          behavior: "append",
+          content: {
+            type: "element",
+            tagName: "i",
+            properties: {
+              className: ["heading-anchor", "fa", "fa-link"],
+            },
+            children: [],
+          },
+        },
+      ],
+      ["rehype-toc", { headings: ["h2", "h3"] }],
+    ],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
