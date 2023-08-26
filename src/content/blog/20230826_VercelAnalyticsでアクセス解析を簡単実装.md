@@ -44,4 +44,4 @@ index.astro の head タグに以下 script を追記
 
 デプロイしてサイトにアクセスしてから Vercel Analytics のページを開くとリアルタイムの解析結果が表示されます。
 
-![Vercel Analytics](/public/assets/post/20230826-vercel-analytics.png)
+![Vercel Analytics](/assets/post/20230826-vercel-analytics.png)
