@@ -1,5 +1,5 @@
 {
-  "name": "eunsol-blog",
+  "name": "piyocolony31-blog",
   "version": "2.3.0",
   "scripts": {
     "dev": "astro check --watch & astro dev",

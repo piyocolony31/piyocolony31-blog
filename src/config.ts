@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://astro-paper.pages.dev/",
   author: "Sat Naing",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "Eunsol Blog",
+  title: "piyocolony31 Blog",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
@@ -142,7 +142,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Zenn",
-    href: "https://zenn.dev/eunsol_seo",
+    href: "https://zenn.dev/piyocolony31_seo",
     linkTitle: `${SITE.title} on Zenn`,
     active: true,
   },
