@@ -13,7 +13,8 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } = post.data;
+const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } =
+  post.data;
 
 const { Content } = await post.render();
 
@@ -21,7 +22,13 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   .href;
 ---
 
-<Layout title={title} author={author} description={description} ogImage={ogUrl} canonicalURL={canonicalURL}>
+<Layout
+  title={title}
+  author={author}
+  description={description}
+  ogImage={ogUrl}
+  canonicalURL={canonicalURL}
+>
   <Header />
   <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
@@ -42,7 +49,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
       <Content />
     </article>
 
-    <ul class="tags-container">
+    <ul>
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
   </main>
@@ -51,7 +58,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
 
 <style>
   main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12 break-all;
+    @apply mx-auto w-full max-w-3xl break-all px-4 pb-12;
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;

@@ -1,5 +1,7 @@
 import Datetime from "./Datetime";
 import type { BlogFrontmatter } from "@content/_schemas";
+import { slugifyStr } from "@utils/slugify";
+import { Tag } from "./Tag";
 
 export interface Props {
   href?: string;
@@ -8,7 +10,7 @@ export interface Props {
 }
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
-  const { title, pubDatetime, description } = frontmatter;
+  const { title, pubDatetime, description, tags } = frontmatter;
   return (
     <li className="my-6">
       <a
@@ -27,6 +29,11 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       </a>
       <Datetime datetime={pubDatetime} />
       <p>{description}</p>
+      <div>
+        {tags.map(tag => (
+          <Tag name={slugifyStr(tag)} />
+        ))}
+      </div>
     </li>
   );
 }
