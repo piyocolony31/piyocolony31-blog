@@ -9,6 +9,7 @@ tags:
   - blog
   - astro
   - vercel
+  - dev
 ogImage: ""
 description: 5分でアクセス解析
 showToc: true
